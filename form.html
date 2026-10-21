@@ -1,0 +1,46 @@
+<!-- # HTML — ADVANCED -->
+<!-- ## 10. Advanced forms -->
+
+<!-- Advanced controls express more precise constraints and relationships. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Delivery</legend>
+        <label for="city">City</label>
+        <input id="city" name="city" list="cities" minlength="2" maxlength="40" required>
+        <datalist id="cities">
+            <option value="London"></option>
+            <option value="Tokyo"></option>
+        </datalist>
+        <label for="quantity">Quantity</label>
+        <input id="quantity" name="quantity" type="number" min="1" max="10" step="1">
+        <label for="notes">Notes</label><textarea id="notes" name="notes"></textarea>
+        <label for="size">Size</label>
+        <select id="size" name="size">
+            <optgroup label="Popular">
+                <option>M</option>
+            </optgroup>
+        </select>
+        <output name="total" for="quantity">0</output>
+        <meter min="0" max="100" value="70">70%</meter>
+        <progress max="100" value="45">45%</progress>
+    </fieldset>
+</body>
+</html>
+
+
+<!-- **Example:** Checkout groups delivery fields, constrains quantity, offers city suggestions, and shows progress through a -->
+<!-- multi-step process. -->
+
+<!-- **Use / do not use:** Use native validation as a helpful first line, but validate again on the server. Use -->
+<!-- `autocomplete` tokens when they describe the field. Do not use `pattern` when a dedicated input type is clearer. -->
+
+<!-- **Write yourself:** Build a registration form with grouped account/profile fields, a datalist, select options, -->
+<!-- constraints, a password pattern, a progress indicator, and an output value. Explain which checks must still happen on -->
+<!-- the server. -->

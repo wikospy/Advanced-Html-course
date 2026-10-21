@@ -1,0 +1,22 @@
+<!-- ## 13. Embedding -->
+<!-- `iframe` embeds another browsing context; `embed` and `object` are legacy-compatible embedding mechanisms for external resources. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+</body>
+<iframe src="https://example.com/widget" title="Example widget" sandbox="allow-scripts" loading="lazy"></iframe>
+
+<body>
+
+</html>
+
+<!-- **Example:** A map is embedded only from a trusted provider and given a useful title. -->
+<!-- **Use / do not use:** Use an iframe when isolation or a third-party document is required. Prefer `sandbox`, restrictive permissions, trusted origins, and `referrerpolicy`. Do not embed untrusted user content without a threat model. -->
+<!-- **Write yourself:** Add a sandboxed iframe and write down which capabilities you intentionally allow and why. Do not use a real sensitive service. -->

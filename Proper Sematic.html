@@ -1,0 +1,32 @@
+<!-- ## 11. Semantic HTML properly -->
+<!-- `header`, `nav`, `main`, `section`, `article`, `aside`, and `footer` are structural landmarks with different meanings. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <article>
+            <header>
+                <h1>Post title</h1>
+            </header>
+            <section>
+                <h2>Background</h2>
+                <p>...</p>
+            </section>
+            <aside aria-label="Related links">...</aside>
+            <footer>Published by ...</footer>
+        </article>
+    </main>
+</body>
+
+</html>
+
+<!-- **Example:** A news article is an independent `article`; related content is an `aside`; a thematic group with its own heading is a `section`. -->
+<!-- **Use / do not use:** Use `section` when there is a meaningful theme and heading. Do not choose elements based only on default styling or use multiple `main` elements in one document. -->
+<!-- **Write yourself:** Convert a page made entirely from `div`s into semantic markup and justify each replacement. -->

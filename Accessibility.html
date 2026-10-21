@@ -1,0 +1,25 @@
+<!-- ## 15. Accessibility -->
+<!-- Accessibility makes content and controls usable with different abilities, devices, and input methods. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+</body>
+<label for="search">Search articles</label>
+<input id="search" aria-describedby="search-help">
+<p id="search-help">Use a topic or author name.</p>
+<button type="button" aria-label="Close menu">×</button>
+
+<body>
+
+</html>
+
+
+<!-- **Example:** A form has a visible label and help text; a close icon has an accessible name. -->
+<!-- **Use / do not use:** Prefer semantic HTML and keyboard-operable native controls. Use ARIA to fill a genuine semantic gap, not to repair incorrect HTML. Do not hide meaningful content with `aria-hidden="true"` or make a non-button clickable with a click handler alone. -->
+<!-- **Write yourself:** Audit one page with keyboard-only navigation. Fix missing labels, poor focus order, ambiguous link text, and inappropriate ARIA. Record each change and its reason. -->
